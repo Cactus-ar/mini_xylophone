@@ -53,6 +53,10 @@ class _TeclaPreview extends State<TeclaPreview>{
       width: 150.0,
       height: 30.0,
       child: DecoratedBox(
+        decoration: BoxDecoration(
+            color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
+          borderRadius: BorderRadius.circular(12),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -61,7 +65,7 @@ class _TeclaPreview extends State<TeclaPreview>{
               child: Container(
                 width: 10,
                   height: 10,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.grey,
                     shape: BoxShape.circle
                   ),
@@ -72,7 +76,7 @@ class _TeclaPreview extends State<TeclaPreview>{
               child: Container(
                 width: 10,
                 height: 10,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.grey,
                     shape: BoxShape.circle
                 ),
@@ -80,18 +84,11 @@ class _TeclaPreview extends State<TeclaPreview>{
             )
           ],
         ),
-        decoration: BoxDecoration(
-            color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
-          borderRadius: BorderRadius.circular(12),
-        ),
       ),
     );
   }
 
 }
-
-//color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
-
 
 class _MyHomePageState extends State<MyHomePage> {
 
