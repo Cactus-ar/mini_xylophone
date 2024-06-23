@@ -16,7 +16,7 @@ class GameSettings extends StatelessWidget {
       body: const Center(
         child: Column(
           children: [
-            Text('Coming Soon')
+            Text('Próximamente')
           ],
         ),
       ),

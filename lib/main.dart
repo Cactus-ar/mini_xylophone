@@ -15,12 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Mini Xylophone',
+      title: 'Mini Xilófono',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Mini Xylophone'),
+      debugShowCheckedModeBanner: false,
+      home: const MyHomePage(title: 'Mini Xilófono'),
     );
   }
 }
@@ -127,10 +128,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: ElevatedButton.icon(
                   onPressed: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const GameEstado(titulo: 'Game',)),
+                      MaterialPageRoute(builder: (context) => const GameEstado(titulo: 'Juego',)),
                     );
                   },
-                  label: const Text('Play'),
+                  label: const Text('Jugar'),
                   icon: const Icon(Icons.play_circle),
                 )),
             Padding(
@@ -138,10 +139,10 @@ class _MyHomePageState extends State<MyHomePage> {
               child: ElevatedButton.icon(
                 onPressed: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const GameSettings(title: 'Settings',)),
+                    MaterialPageRoute(builder: (context) => const GameSettings(title: 'Opciones',)),
                   );
                 },
-                label: const Text('Settings'),
+                label: const Text('Opciones'),
                 icon: const Icon(Icons.settings),
               ),
             ),
@@ -150,10 +151,10 @@ class _MyHomePageState extends State<MyHomePage> {
               child: ElevatedButton.icon(
                 onPressed: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const GameAbout(title: 'About',)),
+                    MaterialPageRoute(builder: (context) => const GameAbout(title: 'Acerca de',)),
                   );
                 },
-                label: const Text('About'),
+                label: const Text('Acerca'),
                 icon: const Icon(Icons.account_box_outlined),
               ),
             ),

@@ -19,9 +19,9 @@ class GameAbout extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.all(18.0),
-                  child: Text('Mini Xylophone V0.1a'),
+                  child: Text('Mini Xilófono V0.1a'),
                 ),
-                Text('June 2024'),
+                Text('Junio 2024'),
               ],
             )
           ],
