@@ -151,10 +151,10 @@ class _MyHomePageState extends State<MyHomePage> {
               child: ElevatedButton.icon(
                 onPressed: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const GameAbout(title: 'Acerca de',)),
+                    MaterialPageRoute(builder: (context) => const GameAbout(title: 'Privacidad',)),
                   );
                 },
-                label: const Text('Acerca'),
+                label: const Text('Privacidad'),
                 icon: const Icon(Icons.account_box_outlined),
               ),
             ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:markdown_widget/widget/markdown.dart';
 
 
 class GameAbout extends StatelessWidget {
@@ -13,18 +15,33 @@ class GameAbout extends StatelessWidget {
         title: Text(title),
       ),
       body: const Center(
-        child: Column(
-          children: [
-            Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(18.0),
-                  child: Text('Mini Xilófono V0.1a'),
-                ),
-                Text('Junio 2024'),
-              ],
-            )
-          ],
+      child: PrivacyPolicy(),
+      ),
+    );
+  }
+}
+
+class PrivacyPolicy extends StatelessWidget {
+  const PrivacyPolicy({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: SizedBox(
+          width: 1000,
+          child: FutureBuilder(
+            future: rootBundle.loadString('assets/policy.md'),
+            builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+              if (snapshot.hasData) {
+                return MarkdownWidget(
+                  data: snapshot.data!,
+                );
+              }
+              return const Center(child: CircularProgressIndicator());
+            },
+          ),
         ),
       ),
     );
