@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+   const MyHomePage({super.key, required this.title});
   final String title;
 
   @override
@@ -151,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: ElevatedButton.icon(
                 onPressed: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const GameAbout(title: 'Acerca de',)),
+                    MaterialPageRoute(builder: (context) => GameAbout(title: 'Acerca de',)),
                   );
                 },
                 label: const Text('Acerca'),
